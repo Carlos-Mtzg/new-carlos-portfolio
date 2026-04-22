@@ -7,7 +7,7 @@ export const aboutContent = {
   ],
   stats: [
     {
-      value: "8+",
+      value: "9+",
       label: "Production systems",
     },
     {
@@ -27,7 +27,7 @@ export const aboutContent = {
     {
       action: "Building production systems",
       company: "A3E Ingenieros",
-      url: "https://www.a3eingenieros.com",
+      url: "https://www.a3eingenieros.com.mx/",
     },
     {
       action: "Co-founder & Backend Architect",
