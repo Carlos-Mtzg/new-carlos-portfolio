@@ -1,9 +1,9 @@
 "use client";
 
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
-import LightRays from "@reactbits/LightRays";
 import TextType from "@reactbits/TextType";
 import { heroPhrases, socialLinks } from "@/lib/data/hero";
+import ScrollIndicator from "@ui/ScrollIndicator";
 
 const iconMap: Record<string, React.ElementType> = {
   GitHub: FaGithub,
@@ -13,25 +13,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden" id="hero">
-      <div className="absolute inset-0">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#b583d3"
-          raysSpeed={1}
-          lightSpread={0.5}
-          rayLength={3}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0}
-          distortion={0}
-          className="custom-rays"
-          pulsating={false}
-          fadeDistance={2}
-          saturation={1}
-        />
-      </div>
-
+    <section className="relative h-screen" id="hero">
       <div className="relative z-10 flex h-full max-w-5xl flex-col justify-center px-12 md:px-24 lg:px-32">
         <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple animate-fade-in-right">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-dark-purple" />
@@ -78,6 +60,8 @@ export default function Hero() {
           })}
         </div>
       </div>
+
+      <ScrollIndicator targetId="about" />
     </section>
   );
 }

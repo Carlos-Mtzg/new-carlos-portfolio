@@ -4,8 +4,8 @@ interface AboutProps {
 
 export default function About({}: AboutProps) {
   return (
-    <div>
+    <section className="h-screen" id="about">
       
-    </div>
+    </section>
   );
 }
