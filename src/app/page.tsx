@@ -7,5 +7,15 @@ import Education from "@components/sections/Education";
 import Contact from "@components/sections/Contact";
 
 export default function Home() {
-  return;
+  return (
+    <main>
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Stack />
+      <Education />
+      <Contact />
+    </main>
+  );
 }
