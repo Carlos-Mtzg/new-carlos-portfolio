@@ -1,1 +1,20 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tailwind-animations';
+
+@theme {
+  --color-bg: #120f18;
+  --color-text: #dad2f6;
+  --color-light-purple: #988bc7;
+  --color-dark-purple: #a755f7;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
