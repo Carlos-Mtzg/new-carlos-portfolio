@@ -3,7 +3,8 @@ import { siteMetadata } from "@/lib/data/metadata";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
-import BackgroundEffect from "@/components/layout/BackgroundEffect";
+import BackgroundEffect from "@components/layout/BackgroundEffect";
+import Navbar from "@components/layout/Navbar";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -60,6 +61,7 @@ export default function RootLayout({
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body>
         <BackgroundEffect />
+        <Navbar />
         {children}
       </body>
     </html>
