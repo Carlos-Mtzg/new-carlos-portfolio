@@ -1,0 +1,59 @@
+import "./globals.css";
+import { siteMetadata } from "@/lib/data/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Carlos Martínez — Full-Stack Developer",
+  description:
+    "Full-Stack Developer specializing in Java, Spring Boot, React, and Next.js. Based in Mexico, open to remote opportunities. Co-founder of NGC Software Solutions.",
+  keywords: [
+    "full-stack developer",
+    "Java developer",
+    "Spring Boot",
+    "React developer",
+    "Next.js",
+    "software engineer Mexico",
+    "backend developer",
+    "remote developer",
+  ],
+  authors: [{ name: siteMetadata.name }],
+  creator: siteMetadata.name,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteMetadata.url,
+    title: siteMetadata.seoTitle,
+    description: siteMetadata.seoDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteMetadata.seoTitle,
+    description: siteMetadata.seoDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://carlosmtzg.dev",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
