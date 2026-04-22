@@ -33,16 +33,16 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 flex h-full max-w-5xl flex-col justify-center px-12 md:px-24 lg:px-32">
-        <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple">
+        <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple animate-fade-in-right">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-dark-purple" />
           Full-Stack Developer
         </span>
 
-        <h1 className="mb-4 text-5xl font-bold leading-tight tracking-tight text-text md:text-7xl">
+        <h1 className="mb-4 text-5xl font-bold leading-tight tracking-tight text-text md:text-7xl animate-fade-in-right animate-delay-100">
           Hi, I&apos;m Charlie
         </h1>
 
-        <div className="mb-8 text-xl text-light-purple md:text-3xl">
+        <div className="mb-8 text-xl text-light-purple md:text-3xl animate-fade-in-right animate-delay-150">
           <TextType
             text={heroPhrases}
             typingSpeed={75}
@@ -54,13 +54,13 @@ export default function Hero() {
           />
         </div>
 
-        <p className="mb-10 max-w-xl text-base leading-relaxed text-text/70 md:text-lg">
+        <p className="mb-10 max-w-xl text-base leading-relaxed text-text/70 md:text-lg animate-fade-in-right animate-delay-250">
           I build complete web systems — from secure REST APIs and robust
           backends to modern, responsive interfaces. Based in Mexico, open to
           remote opportunities worldwide.
         </p>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 animate-fade-in-right animate-delay-350">
           {socialLinks.map(({ label, url }) => {
             const Icon = iconMap[label];
             return (
