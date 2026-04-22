@@ -4,6 +4,8 @@ import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import TextType from "@reactbits/TextType";
 import { heroPhrases, socialLinks } from "@/lib/data/hero";
 import ScrollIndicator from "@ui/ScrollIndicator";
+import Button from "@ui/Button";
+import { motion } from "framer-motion";
 
 const iconMap: Record<string, React.ElementType> = {
   GitHub: FaGithub,
@@ -14,7 +16,7 @@ const iconMap: Record<string, React.ElementType> = {
 export default function Hero() {
   return (
     <section className="relative h-screen" id="hero">
-      <div className="relative z-10 flex h-full max-w-5xl flex-col justify-center px-12 md:px-24 lg:px-32">
+      <div className="relative z-10 flex h-full max-w-5xl flex-col  justify-center px-12 md:px-24 lg:px-32">
         <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple animate-fade-in-right">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-dark-purple" />
           Full-Stack Developer
@@ -36,11 +38,28 @@ export default function Hero() {
           />
         </div>
 
-        <p className="mb-10 max-w-xl text-base leading-relaxed text-text/70 md:text-lg animate-fade-in-right animate-delay-250">
+        <p className="mb-8 max-w-xl text-base leading-relaxed text-text/70 md:text-lg animate-fade-in-right animate-delay-250">
           I build complete web systems — from secure REST APIs and robust
           backends to modern, responsive interfaces. Based in Mexico, open to
           remote opportunities worldwide.
         </p>
+
+        <div className="flex gap-4 mb-10 animate-fade-in-right animate-delay-300">
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Button variant="primary">View my work</Button>
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <a href="/files/CV_CarlosMartinezGomez.pdf" download>
+              <Button variant="ghost">Download CV</Button>
+            </a>
+          </motion.div>
+        </div>
 
         <div className="flex items-center gap-5 animate-fade-in-right animate-delay-350">
           {socialLinks.map(({ label, url }) => {
