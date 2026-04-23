@@ -14,7 +14,7 @@ export default function Experience() {
         </span>
 
         <h2 className="mb-12 text-3xl font-bold tracking-tight text-text md:text-4xl">
-          Where I&apos;ve worked
+          Experience
         </h2>
 
         <div className="relative flex flex-col gap-0">
