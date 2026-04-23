@@ -1,5 +1,5 @@
 import type { Project } from "@/lib/data/projects";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MoveUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import ProjectVideoEmbed from "./ProjectVideoEmbed";
 
@@ -30,9 +30,9 @@ export default function FeaturedProjectCard({ project }: { project: Project }) {
               href={project.companyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-medium uppercase tracking-widest text-dark-purple transition-colors duration-200 hover:text-light-purple"
+              className="text-xs font-medium uppercase tracking-widest text-dark-purple transition-colors duration-200 hover:text-light-purple flex items-center gap-1"
             >
-              {project.company} ↗
+              <span>{project.company}</span> <MoveUpRight size={12}/>
             </a>
             <h3 className="mt-1 text-xl font-semibold text-text">
               {project.shortTitle}
