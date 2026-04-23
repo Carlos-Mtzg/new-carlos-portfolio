@@ -14,7 +14,7 @@ export default function Projects() {
         </span>
 
         <h2 className="mb-12 text-3xl font-bold tracking-tight text-text md:text-4xl">
-          What I&apos;ve built
+          What I build
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
