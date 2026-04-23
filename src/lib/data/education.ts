@@ -18,7 +18,7 @@ export const education: EducationEntry[] = [
     institutionShort: "UTEZ",
     institutionUrl: "https://www.utez.edu.mx/",
     startDate: "Sep 2024",
-    endDate: "Aug 2026",
+    endDate: "Apr 2026",
     status: "Graduated",
     description:
       "Engineering degree focused on software architecture, project management, and advanced development practices.",
