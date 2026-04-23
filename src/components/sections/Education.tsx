@@ -1,4 +1,5 @@
 import { education } from "@/lib/data/education";
+import { MoveUpRight } from "lucide-react";
 
 const statusColors = {
   Graduated: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400",
@@ -35,9 +36,9 @@ export default function Education() {
                       href={entry.institutionUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-medium uppercase tracking-widest text-dark-purple transition-colors duration-200 hover:text-light-purple"
+                      className="text-xs font-medium uppercase tracking-widest text-dark-purple transition-colors duration-200 hover:text-light-purple flex items-center gap-1"
                     >
-                      {entry.institution} ↗
+                      <span>{entry.institution}</span> <MoveUpRight size={12} />
                     </a>
                     <h3 className="mt-1 text-lg font-semibold text-text">
                       {entry.degree}
