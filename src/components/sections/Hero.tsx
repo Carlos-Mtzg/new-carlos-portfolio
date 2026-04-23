@@ -49,7 +49,16 @@ export default function Hero() {
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <Button variant="primary">View my work</Button>
+            <Button
+              variant="primary"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              View my work
+            </Button>
           </motion.div>
           <motion.div
             animate={{ y: [0, 6, 0] }}
