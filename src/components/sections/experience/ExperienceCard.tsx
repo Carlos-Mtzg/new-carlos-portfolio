@@ -1,4 +1,5 @@
 import type { ExperienceEntry } from "@/lib/data/experience";
+import { MoveUpRight } from "lucide-react";
 
 export default function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
   return (
@@ -9,9 +10,9 @@ export default function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
             href={entry.companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-medium uppercase tracking-widest text-dark-purple transition-colors duration-200 hover:text-light-purple"
+            className="text-xs font-medium uppercase tracking-widest text-dark-purple transition-colors duration-200 hover:text-light-purple flex items-center gap-1"
           >
-            {entry.company} ↗
+            <span>{entry.company}</span> <MoveUpRight size={12} />
           </a>
           <h3 className="mt-1 text-lg font-semibold text-text">{entry.role}</h3>
         </div>
