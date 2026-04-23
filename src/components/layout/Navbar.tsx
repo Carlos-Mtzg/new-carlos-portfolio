@@ -28,24 +28,20 @@ export default function Navbar() {
   const [activeId, setActiveId] = useState(navLinks[0].id);
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+    const handleScroll = () => {
+      const triggerY = window.scrollY + window.innerHeight * 0.4;
 
-    navLinks.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (!el) return;
+      let current = navLinks[0].id;
+      for (const { id } of navLinks) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= triggerY) current = id;
+      }
+      setActiveId(current);
+    };
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActiveId(id);
-        },
-        { threshold: 0.4 },
-      );
-
-      observer.observe(el);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
