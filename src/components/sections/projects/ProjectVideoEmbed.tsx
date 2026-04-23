@@ -11,6 +11,7 @@ export default function ProjectVideoEmbed({ youtubeId, alt }: Props) {
       <iframe
         src={getYouTubeEmbedUrl(youtubeId)}
         className="absolute inset-0 h-full w-full border-0"
+        loading="lazy"
         allow="autoplay; encrypted-media"
         title={alt}
       />
