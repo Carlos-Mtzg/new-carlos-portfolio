@@ -15,8 +15,9 @@ export const stack: StackCategory[] = [
       { name: "Java", icon: "java" },
       { name: "Spring Boot", icon: "springboot" },
       { name: "Spring Security", icon: "springsecurity" },
-      { name: "REST API", icon: "fastapi" },
-      { name: "JWT", icon: "jwt" },
+      { name: "Keycloak", icon: "keycloak" },
+      { name: "Log4j2", icon: "log4j2" },
+      { name: "PHP", icon: "php" },
       { name: "Symfony", icon: "symfony" },
     ],
   },
@@ -35,7 +36,7 @@ export const stack: StackCategory[] = [
     category: "Databases",
     items: [
       { name: "MySQL", icon: "mysql" },
-      { name: "ClickHouse", icon: "clickhouse" },
+      { name: "MongoDB", icon: "mongodb" },
     ],
   },
   {
@@ -44,7 +45,6 @@ export const stack: StackCategory[] = [
       { name: "Docker", icon: "docker" },
       { name: "Nginx", icon: "nginx" },
       { name: "Git", icon: "git" },
-      { name: "GitFlow", icon: "git" },
       { name: "GitHub", icon: "github" },
       { name: "GitLab", icon: "gitlab" },
     ],
@@ -57,6 +57,17 @@ export const stack: StackCategory[] = [
       { name: "SonarQube", icon: "sonarqube" },
       { name: "Figma", icon: "figma" },
       { name: "VS Code", icon: "vscode" },
+      { name: "Windows", icon: "windows" },
+      { name: "macOS", icon: "mac" },
+    ],
+  },
+  {
+    category: "AI",
+    items: [
+      { name: "Claude", icon: "claude" },
+      { name: "ChatGPT", icon: "chatgpt" },
+      { name: "Gemini", icon: "gemini" },
+      { name: "GitHub Copilot", icon: "copilot" },
     ],
   },
 ];

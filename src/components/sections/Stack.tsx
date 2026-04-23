@@ -11,6 +11,7 @@ import {
   SiTailwindcss,
   SiFramer,
   SiMysql,
+  SiMongodb,
   SiDocker,
   SiNginx,
   SiGit,
@@ -19,11 +20,16 @@ import {
   SiPostman,
   SiSwagger,
   SiFigma,
-  SiClickhouse,
+  SiPhp,
+  SiKeycloak,
+  SiOpenai,
+  SiGooglegemini,
+  SiGithubcopilot,
+  SiApple,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaWindows } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import { Globe, ShieldCheck, ScanSearch } from "lucide-react";
+import { ScanSearch, ScrollText, Bot } from "lucide-react";
 import type { IconType } from "react-icons";
 import type { LucideIcon } from "lucide-react";
 
@@ -31,8 +37,9 @@ const iconMap: Record<string, IconType | LucideIcon> = {
   java: FaJava,
   springboot: SiSpring,
   springsecurity: SiSpring,
-  fastapi: Globe,
-  jwt: ShieldCheck,
+  keycloak: SiKeycloak,
+  log4j2: ScrollText,
+  php: SiPhp,
   symfony: SiSymfony,
   react: SiReact,
   nextjs: SiNextdotjs,
@@ -41,7 +48,7 @@ const iconMap: Record<string, IconType | LucideIcon> = {
   tailwindcss: SiTailwindcss,
   framermotion: SiFramer,
   mysql: SiMysql,
-  clickhouse: SiClickhouse,
+  mongodb: SiMongodb,
   docker: SiDocker,
   nginx: SiNginx,
   git: SiGit,
@@ -52,6 +59,12 @@ const iconMap: Record<string, IconType | LucideIcon> = {
   sonarqube: ScanSearch,
   figma: SiFigma,
   vscode: VscVscode,
+  windows: FaWindows,
+  mac: SiApple,
+  claude: Bot,
+  chatgpt: SiOpenai,
+  gemini: SiGooglegemini,
+  copilot: SiGithubcopilot,
 };
 
 export default function Stack() {
