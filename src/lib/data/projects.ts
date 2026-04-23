@@ -306,6 +306,27 @@ export const projects: Project[] = [
   },
 ];
 
+export const projectDescriptionsEs: Record<string, string> = {
+  "monitor-i3":
+    "Plataforma completa para monitorear parámetros de la red eléctrica y verificar el cumplimiento del Código de Red V2.0 de México. Los operadores pueden visualizar su infraestructura en tiempo real, recibir alertas automáticas antes de que los problemas se conviertan en fallas, y construir diagramas unifilares interactivos de su red.",
+  "clinica-san-juan":
+    "Sistema On-Premise que reemplaza procesos en papel con una plataforma digital centralizada para una clínica en Morelos, México. Cubre registro de pacientes, expedientes médicos, programación de citas y generación de reportes.",
+  "ngc-official-site":
+    "Sitio corporativo de NGC Software Solutions — la empresa de software que co-fundé. Diseñado y construido íntegramente por mí, desde la arquitectura hasta el despliegue.",
+  gecom:
+    "Plataforma web interna para gestionar requisiciones de compra, proyectos y usuarios en toda la organización. Incluye flujos completos de autenticación con activación de cuenta por email y recuperación de contraseña.",
+  gevensi:
+    "Sistema de gestión de datos energéticos que permite a los usuarios ingresar datos de consumo y generar gráficas y tablas interactivas. Incluye un módulo de personalización white-label para reventa y obtuvo la certificación oficial 'Hecho en México'.",
+  "a3e-corporate-site":
+    "Sitio corporativo para A3E Ingenieros, una firma de ingeniería eléctrica. Diseñado y construido con un stack moderno de React, migrando desde un frontend legacy para mejorar el rendimiento y la experiencia de usuario.",
+  "landing-monitor-i3":
+    "Landing page profesional para la plataforma de monitoreo eléctrico Monitor I3. Construida con una arquitectura de componentes modulares y formularios de contacto validados conectados a un backend centralizado.",
+  "landing-gevensi":
+    "Landing page profesional para el sistema de gestión energética GEVENSI. Muestra las características del producto y capta leads a través de un formulario de contacto validado conectado a un backend centralizado.",
+  "landing-sismedia-rt":
+    "Landing page profesional para SISMEDIA RT, un sistema de adquisición de datos en tiempo real. Construida con una arquitectura de componentes modulares y formularios de contacto validados conectados a un backend centralizado.",
+};
+
 // Helpers
 export const featuredProjects = projects.filter((p) => p.featured);
 export const allProjects = [...projects].sort((a, b) => a.order - b.order);

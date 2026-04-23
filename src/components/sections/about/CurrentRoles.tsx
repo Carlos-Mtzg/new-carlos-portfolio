@@ -6,13 +6,14 @@ interface Role {
 
 interface CurrentRolesProps {
   roles: Role[];
+  currentlyAtLabel: string;
 }
 
-export default function CurrentRoles({ roles }: CurrentRolesProps) {
+export default function CurrentRoles({ roles, currentlyAtLabel }: CurrentRolesProps) {
   return (
     <div className="flex flex-col gap-3">
       <p className="text-xs font-medium uppercase tracking-widest text-light-purple/60">
-        Currently at
+        {currentlyAtLabel}
       </p>
       {roles.map(({ action, company, url }) => (
         <a

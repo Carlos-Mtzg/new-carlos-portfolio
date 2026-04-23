@@ -2,10 +2,12 @@
 
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import TextType from "@reactbits/TextType";
-import { heroPhrases, socialLinks } from "@/lib/data/hero";
+import { heroPhrases, heroPhrasesEs, socialLinks } from "@/lib/data/hero";
 import ScrollIndicator from "@ui/ScrollIndicator";
 import Button from "@ui/Button";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import { ui } from "@/lib/i18n/translations";
 
 const iconMap: Record<string, React.ElementType> = {
   GitHub: FaGithub,
@@ -14,21 +16,26 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function Hero() {
+  const { lang } = useLanguage();
+  const t = ui[lang].hero;
+  const phrases = lang === "en" ? heroPhrases : heroPhrasesEs;
+
   return (
     <section className="relative h-screen" id="hero">
       <div className="relative z-10 flex h-full max-w-5xl flex-col  justify-center px-12 md:px-24 lg:px-32">
         <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple animate-fade-in-right">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-dark-purple" />
-          Full-Stack Developer
+          {t.badge}
         </span>
 
         <h1 className="mb-4 text-5xl font-bold leading-tight tracking-tight text-text md:text-7xl animate-fade-in-right animate-delay-100">
-          Hi, I&apos;m Charlie
+          {t.intro}
         </h1>
 
         <div className="mb-8 text-xl text-light-purple md:text-3xl animate-fade-in-right animate-delay-150">
           <TextType
-            text={heroPhrases}
+            key={lang}
+            text={phrases}
             typingSpeed={75}
             pauseDuration={1500}
             deletingSpeed={50}
@@ -39,9 +46,7 @@ export default function Hero() {
         </div>
 
         <p className="mb-8 max-w-xl text-base leading-relaxed text-text/70 md:text-lg animate-fade-in-right animate-delay-250">
-          I build complete web systems — from secure REST APIs and robust
-          backends to modern, responsive interfaces. Based in Mexico, open to
-          remote opportunities worldwide.
+          {t.description}
         </p>
 
         <div className="flex gap-4 mb-10 animate-fade-in-right animate-delay-300">
@@ -57,7 +62,7 @@ export default function Hero() {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              View my work
+              {t.viewWork}
             </Button>
           </motion.div>
           <motion.div
@@ -65,7 +70,7 @@ export default function Hero() {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
             <a href="/files/CV_CarlosMartinezGomez.pdf" download>
-              <Button variant="ghost">Download CV</Button>
+              <Button variant="ghost">{t.downloadCV}</Button>
             </a>
           </motion.div>
         </div>

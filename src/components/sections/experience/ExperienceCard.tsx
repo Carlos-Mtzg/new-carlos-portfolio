@@ -1,7 +1,13 @@
 import type { ExperienceEntry } from "@/lib/data/experience";
+import type { ui } from "@/lib/i18n/translations";
 import { MoveUpRight } from "lucide-react";
 
-export default function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
+interface Props {
+  entry: ExperienceEntry;
+  t: typeof ui.en.experience;
+}
+
+export default function ExperienceCard({ entry, t }: Props) {
   return (
     <div className="group rounded-xl border border-light-purple/10 bg-light-purple/5 p-6 transition-colors duration-300 hover:border-light-purple/20 hover:bg-light-purple/8">
       <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
@@ -19,10 +25,10 @@ export default function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
 
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full border border-light-purple/20 bg-light-purple/10 px-3 py-1 text-xs font-medium text-light-purple">
-            {entry.type}
+            {t.types[entry.type] ?? entry.type}
           </span>
           <span className="rounded-full border border-light-purple/15 px-3 py-1 text-xs text-text/50">
-            {entry.locationType}
+            {t.locationTypes[entry.locationType] ?? entry.locationType}
           </span>
         </div>
       </div>
@@ -35,7 +41,7 @@ export default function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
           {entry.current ? (
             <span className="inline-flex items-center gap-1.5 text-dark-purple">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-dark-purple" />
-              Present
+              {t.present}
             </span>
           ) : (
             entry.endDate

@@ -1,4 +1,5 @@
 import type { Project } from "@/lib/data/projects";
+import type { ui } from "@/lib/i18n/translations";
 import { ExternalLink, MoveUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import ProjectVideoEmbed from "./ProjectVideoEmbed";
@@ -10,7 +11,13 @@ const statusColors: Record<string, string> = {
   "Open Source": "border-dark-purple/30 bg-dark-purple/10 text-dark-purple",
 };
 
-export default function FeaturedProjectCard({ project }: { project: Project }) {
+interface Props {
+  project: Project;
+  description: string;
+  t: typeof ui.en.projects;
+}
+
+export default function FeaturedProjectCard({ project, description, t }: Props) {
   const hasLinks =
     project.links.repo || project.links.site || project.links.demo;
 
@@ -45,18 +52,18 @@ export default function FeaturedProjectCard({ project }: { project: Project }) {
                 key={s}
                 className={`rounded-full border px-3 py-1 text-xs font-medium ${statusColors[s]}`}
               >
-                {s}
+                {t.statuses[s] ?? s}
               </span>
             ))}
           </div>
         </div>
 
         <span className="mb-4 inline-block rounded-md border border-light-purple/15 bg-light-purple/5 px-2.5 py-1 text-xs text-light-purple/70">
-          {project.sector}
+          {t.sectors[project.sector] ?? project.sector}
         </span>
 
         <p className="mb-5 text-sm leading-relaxed text-text/60">
-          {project.description}
+          {description}
         </p>
 
         <div className="mb-5 flex flex-wrap gap-2">
@@ -79,7 +86,7 @@ export default function FeaturedProjectCard({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-sm text-text/60 transition-colors duration-200 hover:text-text"
               >
-                <FaGithub size={15} /> Repo
+                <FaGithub size={15} /> {t.repo}
               </a>
             )}
             {project.links.site && (
@@ -89,7 +96,7 @@ export default function FeaturedProjectCard({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-sm text-text/60 transition-colors duration-200 hover:text-text"
               >
-                <ExternalLink size={15} /> Live Site
+                <ExternalLink size={15} /> {t.liveSite}
               </a>
             )}
             {project.links.demo && (
@@ -99,7 +106,7 @@ export default function FeaturedProjectCard({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-sm text-text/60 transition-colors duration-200 hover:text-text"
               >
-                <ExternalLink size={15} /> Demo
+                <ExternalLink size={15} /> {t.demo}
               </a>
             )}
           </div>

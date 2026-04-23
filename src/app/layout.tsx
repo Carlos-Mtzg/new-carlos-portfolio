@@ -5,6 +5,7 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import BackgroundEffect from "@components/layout/BackgroundEffect";
 import Navbar from "@components/layout/Navbar";
+import Providers from "@components/layout/Providers";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -60,9 +61,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body>
-        <BackgroundEffect />
-        <Navbar />
-        {children}
+        <Providers>
+          <BackgroundEffect />
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

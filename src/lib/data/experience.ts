@@ -95,3 +95,28 @@ export const experience: ExperienceEntry[] = [
     ],
   },
 ];
+
+export const experienceEs: ExperienceEntry[] = [
+  {
+    ...experience[0],
+    description:
+      "Desarrollador full-stack en el equipo de producto interno de una firma de ingeniería eléctrica. Responsable del diseño, construcción y mantenimiento de plataformas web para monitoreo energético, presencia corporativa y operaciones internas.",
+    achievements: [
+      { text: "Construí Monitor I3, una plataforma de monitoreo eléctrico en tiempo real usando SSE y ClickHouse, incluyendo un editor de diagrama unifilar drag-and-drop con Konva." },
+      { text: "Desarrollé GECOM, un sistema interno de gestión de compras con flujos completos de autenticación JWT, activación de cuenta por email y control de acceso basado en roles." },
+      { text: "Construí el sitio corporativo de A3E y 3 landing pages responsivas (SISMEDIA RT, GEVENSI, Monitor I3) compartiendo un backend centralizado en Spring Boot con panel de administración." },
+      { text: "Implementé autenticación JWT sin estado con refresh tokens en cookies HttpOnly, rate limiting con Bucket4j y Spring Security en múltiples sistemas de producción." },
+    ],
+  },
+  {
+    ...experience[1],
+    description:
+      "Co-fundé una empresa de desarrollo de software personalizado con dos ingenieros. Responsable de la arquitectura backend, diseño de APIs, implementación de seguridad y desarrollo frontend en proyectos de clientes.",
+    achievements: [
+      { text: "Desarrollé un sistema de gestión de expedientes clínicos (On-Premise) para Clínica San Juan con RBAC para tres roles de usuario, generación dinámica de reportes Excel/PDF y despliegue completo en intranet." },
+      { text: "Construí el sitio corporativo de NGC desde cero usando Next.js 15, TypeScript, TailwindCSS v4 y un shader WebGL Aurora animado con OGL." },
+      { text: "Diseñé la arquitectura backend para proyectos de clientes incluyendo diseño de APIs REST, flujos de autenticación JWT y control de acceso basado en roles." },
+      { text: "Escalamos a 2 clientes activos en los sectores energético, de salud y agroindustrial en los primeros meses de operación." },
+    ],
+  },
+];

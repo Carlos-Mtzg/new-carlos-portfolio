@@ -32,6 +32,8 @@ import { VscVscode } from "react-icons/vsc";
 import { ScanSearch, ScrollText, Bot } from "lucide-react";
 import type { IconType } from "react-icons";
 import type { LucideIcon } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { ui } from "@/lib/i18n/translations";
 
 const iconMap: Record<string, IconType | LucideIcon> = {
   java: FaJava,
@@ -68,6 +70,9 @@ const iconMap: Record<string, IconType | LucideIcon> = {
 };
 
 export default function Stack() {
+  const { lang } = useLanguage();
+  const t = ui[lang].stack;
+
   return (
     <section
       className="relative min-h-screen timeline-view animate-blurred-fade-in animate-range-[entry_10%_contain_30%]"
@@ -76,18 +81,18 @@ export default function Stack() {
       <div className="relative z-10 flex min-h-screen max-w-5xl flex-col justify-center px-12 py-24 md:px-24 lg:px-32">
         <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple">
           <span className="h-1.5 w-1.5 rounded-full bg-dark-purple" />
-          Tech Stack
+          {t.badge}
         </span>
 
         <h2 className="mb-12 text-3xl font-bold tracking-tight text-text md:text-4xl">
-          Technologies
+          {t.heading}
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2">
           {stack.map(({ category, items }) => (
             <div key={category}>
               <p className="mb-4 text-xs font-medium uppercase tracking-widest text-light-purple/60">
-                {category}
+                {t.categories[category] ?? category}
               </p>
               <div className="flex flex-wrap gap-2">
                 {items.map(({ name, icon }) => {

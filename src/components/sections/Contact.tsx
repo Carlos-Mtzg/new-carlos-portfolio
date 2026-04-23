@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -7,7 +8,9 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Mail, MoveRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { IconType } from "react-icons";
-import { contactLinks } from "@/lib/data/contact";
+import { contactLinks, contactLinksEs } from "@/lib/data/contact";
+import { useLanguage } from "@/context/LanguageContext";
+import { ui } from "@/lib/i18n/translations";
 
 const iconMap: Record<string, IconType | LucideIcon> = {
   linkedin: FaLinkedin,
@@ -15,18 +18,30 @@ const iconMap: Record<string, IconType | LucideIcon> = {
   mail: Mail,
 };
 
-const schema = yup.object({
-  name: yup.string().required("Name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
-  message: yup
-    .string()
-    .min(10, "Message must be at least 10 characters")
-    .required("Message is required"),
-});
-
-type FormData = yup.InferType<typeof schema>;
-
 export default function Contact() {
+  const { lang } = useLanguage();
+  const t = ui[lang].contact;
+  const links = lang === "en" ? contactLinks : contactLinksEs;
+
+  const schema = useMemo(
+    () =>
+      yup.object({
+        name: yup.string().required(t.form.errors.nameRequired),
+        email: yup
+          .string()
+          .email(t.form.errors.emailInvalid)
+          .required(t.form.errors.emailRequired),
+        message: yup
+          .string()
+          .min(10, t.form.errors.messageMin)
+          .required(t.form.errors.messageRequired),
+      }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [lang],
+  );
+
+  type FormData = yup.InferType<typeof schema>;
+
   const {
     register,
     handleSubmit,
@@ -53,20 +68,19 @@ export default function Contact() {
       <div className="relative z-10 flex min-h-screen max-w-5xl flex-col justify-center px-12 py-24 md:px-24 lg:px-32">
         <span className="mb-8 inline-flex w-fit items-center gap-2 rounded-full border border-light-purple/30 bg-light-purple/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-light-purple">
           <span className="h-1.5 w-1.5 rounded-full bg-dark-purple" />
-          Contact
+          {t.badge}
         </span>
 
         <h2 className="mb-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-          Let&apos;s work together
+          {t.heading}
         </h2>
         <p className="mb-12 max-w-md text-base leading-relaxed text-text/60">
-          Open to full-time roles, freelance projects, and collaborations. Reach
-          out through any of these channels or drop me a message below.
+          {t.subtitle}
         </p>
 
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-3">
-            {contactLinks.map(({ label, value, url, icon, description }) => {
+            {links.map(({ label, value, url, icon, description }) => {
               const Icon = iconMap[icon];
               return (
                 <a
@@ -95,7 +109,6 @@ export default function Contact() {
             })}
           </div>
 
-          {/* Contact form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
             noValidate
@@ -104,11 +117,11 @@ export default function Contact() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-medium uppercase tracking-widest text-light-purple/60">
-                  Name
+                  {t.form.nameLabel}
                 </label>
                 <input
                   {...register("name")}
-                  placeholder="Write your name"
+                  placeholder={t.form.namePlaceholder}
                   className="rounded-lg border border-light-purple/15 bg-light-purple/5 px-4 py-2.5 text-sm text-text placeholder:text-text/30 outline-none transition-colors duration-200 focus:border-dark-purple/50 focus:bg-light-purple/8"
                 />
                 {errors.name && (
@@ -118,12 +131,12 @@ export default function Contact() {
 
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-medium uppercase tracking-widest text-light-purple/60">
-                  Email
+                  {t.form.emailLabel}
                 </label>
                 <input
                   {...register("email")}
                   type="email"
-                  placeholder="Write your email"
+                  placeholder={t.form.emailPlaceholder}
                   className="rounded-lg border border-light-purple/15 bg-light-purple/5 px-4 py-2.5 text-sm text-text placeholder:text-text/30 outline-none transition-colors duration-200 focus:border-dark-purple/50 focus:bg-light-purple/8"
                 />
                 {errors.email && (
@@ -134,12 +147,12 @@ export default function Contact() {
 
             <div className="flex flex-col gap-1.5">
               <label className="text-xs font-medium uppercase tracking-widest text-light-purple/60">
-                Message
+                {t.form.messageLabel}
               </label>
               <textarea
                 {...register("message")}
                 rows={5}
-                placeholder="Tell me about your project..."
+                placeholder={t.form.messagePlaceholder}
                 className="resize-none rounded-lg border border-light-purple/15 bg-light-purple/5 px-4 py-2.5 text-sm text-text placeholder:text-text/30 outline-none transition-colors duration-200 focus:border-dark-purple/50 focus:bg-light-purple/8"
               />
               {errors.message && (
@@ -151,7 +164,7 @@ export default function Contact() {
               type="submit"
               className="mt-2 rounded-lg border border-dark-purple/40 bg-dark-purple/10 px-6 py-2.5 text-sm font-medium text-dark-purple transition-colors duration-200 hover:border-dark-purple/60 hover:bg-dark-purple/20"
             >
-              {isSubmitSuccessful ? "Message sent" : "Send message"}
+              {isSubmitSuccessful ? t.form.sent : t.form.send}
             </button>
           </form>
         </div>
