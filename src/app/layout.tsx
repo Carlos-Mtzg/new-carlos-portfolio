@@ -5,9 +5,10 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import BackgroundEffect from "@components/layout/BackgroundEffect";
 import Navbar from "@components/layout/Navbar";
+import LanguageToggle from "@components/layout/LanguageToggle";
 import Providers from "@components/layout/Providers";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Carlos Martínez — Full-Stack Developer",
@@ -64,6 +65,7 @@ export default function RootLayout({
         <Providers>
           <BackgroundEffect />
           <Navbar />
+          <LanguageToggle />
           {children}
         </Providers>
       </body>
