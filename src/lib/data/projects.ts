@@ -83,7 +83,7 @@ export const projects: Project[] = [
     company: "NGC Software Solutions",
     companyUrl: "https://ngcsoftwaresolutions.com",
     sector: "Healthcare",
-    status: ["In Development"],
+    status: ["Live"],
     description:
       "On-premise system that replaces paper-based processes with a centralized digital platform for a clinic in Morelos, México. Covers patient registration, medical records, appointment scheduling, and report generation.",
     stack: [
@@ -96,7 +96,9 @@ export const projects: Project[] = [
       "MySQL",
       "Docker",
     ],
-    links: {},
+    links: {
+      site: "https://clinicasanjuan.net/bienvenida",
+    },
     media: {
       type: "video",
       youtubeId: "7mM-IL4iIsI",
