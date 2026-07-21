@@ -70,7 +70,7 @@ export const projects: Project[] = [
     links: {},
     media: {
       type: "video",
-      youtubeId: "mN6xWBGA2e0",
+      youtubeId: "TdS_9xjhMs4",
       alt: "Monitor I3 — Real-time electrical monitoring platform demo",
     },
     featured: true,
