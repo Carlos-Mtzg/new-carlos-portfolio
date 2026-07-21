@@ -101,7 +101,7 @@ export const projects: Project[] = [
     },
     media: {
       type: "video",
-      youtubeId: "7mM-IL4iIsI",
+      youtubeId: "IW0GanjK8fk",
       alt: "Clinical Records Management System — Clínica San Juan demo",
     },
     featured: true,
