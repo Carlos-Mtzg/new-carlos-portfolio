@@ -15,7 +15,7 @@ export const aboutContentEs = {
     {
       action: "Construyendo sistemas en producción",
       company: "A3E Ingenieros",
-      url: "https://www.a3eingenieros.com.mx/",
+      url: "https://www.a3e.com.mx/",
     },
     {
       action: "Co-fundador & Arquitecto Backend",
@@ -54,7 +54,7 @@ export const aboutContent = {
     {
       action: "Building production systems",
       company: "A3E Ingenieros",
-      url: "https://www.a3eingenieros.com.mx/",
+      url: "https://www.a3e.com.mx/",
     },
     {
       action: "Co-founder & Backend Architect",

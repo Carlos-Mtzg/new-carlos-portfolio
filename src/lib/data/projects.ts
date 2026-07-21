@@ -49,7 +49,7 @@ export const projects: Project[] = [
     title: "Monitor I3 — Real-Time Electrical Monitoring Platform",
     shortTitle: "Monitor I3",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["In Production"],
     description:
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     title: "GECOM — Internal Purchasing Management System",
     shortTitle: "GECOM",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["In Production"],
     description:
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     title: "GEVENSI — Energy Management System",
     shortTitle: "GEVENSI",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["In Production"],
     description:
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     title: "A3E Ingenieros — Corporate Website",
     shortTitle: "A3E Corporate Site",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["Live"],
     description:
@@ -205,7 +205,7 @@ export const projects: Project[] = [
       "MySQL",
     ],
     links: {
-      site: "https://www.a3eingenieros.com.mx/",
+      site: "https://www.a3e.com.mx/",
     },
     media: {
       type: "video",
@@ -220,7 +220,7 @@ export const projects: Project[] = [
     title: "Monitor I3 — Landing Page",
     shortTitle: "Monitor I3 Landing",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["Live"],
     description:
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     title: "GEVENSI — Landing Page",
     shortTitle: "GEVENSI Landing",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["Live"],
     description:
@@ -280,7 +280,7 @@ export const projects: Project[] = [
     title: "SISMEDIA RT — Landing Page",
     shortTitle: "SISMEDIA RT Landing",
     company: "A3E Ingenieros",
-    companyUrl: "https://www.a3eingenieros.com.mx/",
+    companyUrl: "https://www.a3e.com.mx/",
     sector: "Energy · Industrial",
     status: ["Live"],
     description:
