@@ -6,7 +6,7 @@ export const aboutContentEs = {
     "También soy co-fundador de NGC Software Solutions, donde diseñamos y construimos software personalizado para empresas que necesitan soluciones reales — no herramientas genéricas.",
   ],
   stats: [
-    { value: "9+", label: "Sistemas en producción" },
+    { value: "11+", label: "Sistemas en producción" },
     { value: "3", label: "Industrias" },
     { value: "2+", label: "Años de experiencia" },
     { value: "2", label: "Empresas" },
@@ -34,7 +34,7 @@ export const aboutContent = {
   ],
   stats: [
     {
-      value: "9+",
+      value: "11+",
       label: "Production systems",
     },
     {
