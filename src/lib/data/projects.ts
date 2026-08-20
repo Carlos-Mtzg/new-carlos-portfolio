@@ -76,8 +76,40 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "medonline",
+    order: 3,
+    title: "MedOnline — Electronic Health Records System",
+    shortTitle: "MedOnline",
+    company: "NGC Software Solutions",
+    companyUrl: "https://ngcsoftwaresolutions.com",
+    sector: "Healthcare",
+    status: ["In Production"],
+    description:
+      "Full-stack electronic health record system for Mexican private clinics, built to comply with NOM-004-SSA3-2012 and NOM-024-SSA3-2012. Digitizes the complete care cycle — patient registration, appointments, clinical history, progress notes, interconsultations, referrals, and service billing. Built with a team of 3 engineers.",
+    stack: [
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "React Query",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "MySQL",
+      "MinIO",
+      "AWS S3",
+      "Docker",
+    ],
+    links: {},
+    media: {
+      type: "video",
+      youtubeId: "F71Kk-L_1Cg",
+      alt: "MedOnline — Electronic health records system demo",
+    },
+    featured: false,
+  },
+  {
     id: "clinica-san-juan",
-    order: 4,
+    order: 5,
     title: "Clinical Records Management System — Clínica San Juan",
     shortTitle: "Clínica San Juan",
     company: "NGC Software Solutions",
@@ -108,7 +140,7 @@ export const projects: Project[] = [
   },
   {
     id: "ngc-official-site",
-    order: 5,
+    order: 6,
     title: "NGC Software Solutions — Corporate Website",
     shortTitle: "NGC Official Site",
     company: "NGC Software Solutions",
@@ -139,7 +171,7 @@ export const projects: Project[] = [
   },
   {
     id: "gecom",
-    order: 3,
+    order: 4,
     title: "GECOM — Internal Purchasing Management System",
     shortTitle: "GECOM",
     company: "A3E Ingenieros",
@@ -188,7 +220,7 @@ export const projects: Project[] = [
   },
   {
     id: "a3e-corporate-site",
-    order: 6,
+    order: 7,
     title: "A3E Ingenieros — Corporate Website",
     shortTitle: "A3E Corporate Site",
     company: "A3E Ingenieros",
@@ -218,7 +250,7 @@ export const projects: Project[] = [
   },
   {
     id: "landing-monitor-i3",
-    order: 7,
+    order: 9,
     title: "Monitor I3 — Landing Page",
     shortTitle: "Monitor I3 Landing",
     company: "A3E Ingenieros",
@@ -248,7 +280,7 @@ export const projects: Project[] = [
   },
   {
     id: "landing-gevensi",
-    order: 8,
+    order: 10,
     title: "GEVENSI — Landing Page",
     shortTitle: "GEVENSI Landing",
     company: "A3E Ingenieros",
@@ -278,7 +310,7 @@ export const projects: Project[] = [
   },
   {
     id: "landing-sismedia-rt",
-    order: 9,
+    order: 11,
     title: "SISMEDIA RT — Landing Page",
     shortTitle: "SISMEDIA RT Landing",
     company: "A3E Ingenieros",
@@ -306,6 +338,36 @@ export const projects: Project[] = [
     },
     featured: false,
   },
+  {
+    id: "medonline-landing",
+    order: 8,
+    title: "MedOnline — Marketing Landing Page",
+    shortTitle: "MedOnline Landing",
+    company: "NGC Software Solutions",
+    companyUrl: "https://ngcsoftwaresolutions.com",
+    sector: "Healthcare",
+    status: ["Live"],
+    description:
+      "Marketing landing page for MedOnline, a clinical electronic health record system built for compliance with Mexico's NOM-004-SSA3-2012. Built end-to-end as a fully static Next.js export deployed on Cloudflare Pages.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS v4",
+      "GSAP",
+      "shadcn",
+      "pnpm",
+    ],
+    links: {
+      site: "https://medonline.com.mx/",
+    },
+    media: {
+      type: "video",
+      youtubeId: "6azkgR9_5co",
+      alt: "MedOnline landing page walkthrough",
+    },
+    featured: false,
+  },
 ];
 
 export const projectDescriptionsEs: Record<string, string> = {
@@ -327,6 +389,10 @@ export const projectDescriptionsEs: Record<string, string> = {
     "Landing page profesional para el sistema de gestión energética GEVENSI. Muestra las características del producto y capta leads a través de un formulario de contacto validado conectado a un backend centralizado.",
   "landing-sismedia-rt":
     "Landing page profesional para SISMEDIA RT, un sistema de adquisición de datos en tiempo real. Construida con una arquitectura de componentes modulares y formularios de contacto validados conectados a un backend centralizado.",
+  medonline:
+    "Sistema de expediente clínico electrónico full-stack para clínicas privadas en México, diseñado para cumplir con la NOM-004-SSA3-2012 y la NOM-024-SSA3-2012. Digitaliza el ciclo completo de atención — registro de pacientes, citas, historia clínica, notas de evolución, interconsultas, referencias y facturación de servicios. Desarrollado en equipo de 3 ingenieros.",
+  "medonline-landing":
+    "Landing page de marketing para MedOnline, un sistema de expediente clínico electrónico conforme a la NOM-004-SSA3-2012. Desarrollada de principio a fin como exportación estática de Next.js, desplegada en Cloudflare Pages.",
 };
 
 // Helpers
