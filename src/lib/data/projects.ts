@@ -164,7 +164,7 @@ export const projects: Project[] = [
     },
     media: {
       type: "video",
-      youtubeId: "A7cAgoG6G-I",
+      youtubeId: "vUncnWcXuVQ",
       alt: "NGC Software Solutions corporate website walkthrough",
     },
     featured: true,
