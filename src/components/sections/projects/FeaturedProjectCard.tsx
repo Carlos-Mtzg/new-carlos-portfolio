@@ -1,8 +1,10 @@
 import type { Project } from "@/lib/data/projects";
 import type { ui } from "@/lib/i18n/translations";
-import { ExternalLink, MoveUpRight } from "lucide-react";
+import { ExternalLink, Lock, MoveUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import ProjectVideoEmbed from "./ProjectVideoEmbed";
+import ProjectImage from "./ProjectImage";
+import ProjectGallery from "./ProjectGallery";
 
 const statusColors: Record<string, string> = {
   "In Production": "border-emerald-500/30 bg-emerald-500/10 text-emerald-400",
@@ -27,6 +29,28 @@ export default function FeaturedProjectCard({ project, description, t }: Props) 
         <ProjectVideoEmbed
           youtubeId={project.media.youtubeId}
           alt={project.media.alt}
+        />
+      )}
+      {project.media.type === "image" && (
+        <ProjectImage
+          src={project.media.src}
+          alt={project.media.alt}
+          title={project.shortTitle}
+          protectedNotice={
+            project.protectedData ? t.protectedDataNotice : undefined
+          }
+          comingSoonLabel={t.mediaComingSoon}
+        />
+      )}
+      {project.media.type === "gallery" && (
+        <ProjectGallery
+          images={project.media.images}
+          title={project.shortTitle}
+          labels={{
+            previous: t.previousImage,
+            next: t.nextImage,
+            goTo: t.goToImage,
+          }}
         />
       )}
 
@@ -55,6 +79,11 @@ export default function FeaturedProjectCard({ project, description, t }: Props) 
                 {t.statuses[s] ?? s}
               </span>
             ))}
+            {project.protectedData && (
+              <span className="flex items-center gap-1 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-400">
+                <Lock size={11} aria-hidden /> {t.protectedData}
+              </span>
+            )}
           </div>
         </div>
 
