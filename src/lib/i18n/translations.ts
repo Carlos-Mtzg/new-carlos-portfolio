@@ -13,7 +13,7 @@ export const ui = {
       badge: "Full-Stack Developer",
       intro: "Hi, I'm Charlie",
       description:
-        "I build complete web systems — from secure REST APIs and robust backends to modern, responsive interfaces. Based in Mexico, open to remote opportunities worldwide.",
+        "I build complete web systems, from secure REST APIs and robust backends to modern, responsive interfaces. Based in Mexico, open to remote opportunities worldwide.",
       viewWork: "View my work",
       downloadCV: "Download CV",
     },
@@ -42,6 +42,12 @@ export const ui = {
       repo: "Repo",
       liveSite: "Live Site",
       demo: "Demo",
+      protectedData: "Protected data",
+      protectedDataNotice: "Screens withheld to protect client data",
+      mediaComingSoon: "Preview coming soon",
+      previousImage: "Previous screenshot",
+      nextImage: "Next screenshot",
+      goToImage: "Go to screenshot",
       statuses: {
         "In Production": "In Production",
         "In Development": "In Development",
@@ -113,7 +119,7 @@ export const ui = {
       badge: "Desarrollador Full-Stack",
       intro: "Hola, soy Charlie",
       description:
-        "Construyo sistemas web completos — desde APIs REST seguras y backends robustos hasta interfaces modernas y responsivas. Basado en México, abierto a oportunidades remotas en todo el mundo.",
+        "Construyo sistemas web completos, desde APIs REST seguras y backends robustos hasta interfaces modernas y responsivas. Basado en México, abierto a oportunidades remotas en todo el mundo.",
       viewWork: "Ver mi trabajo",
       downloadCV: "Descargar CV",
     },
@@ -142,6 +148,12 @@ export const ui = {
       repo: "Repo",
       liveSite: "Sitio en vivo",
       demo: "Demo",
+      protectedData: "Datos protegidos",
+      protectedDataNotice: "Pantallas omitidas para proteger los datos del cliente",
+      mediaComingSoon: "Vista previa próximamente",
+      previousImage: "Captura anterior",
+      nextImage: "Captura siguiente",
+      goToImage: "Ir a la captura",
       statuses: {
         "In Production": "En producción",
         "In Development": "En desarrollo",

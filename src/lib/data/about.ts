@@ -2,11 +2,11 @@ export const aboutContentEs = {
   title: "Sobre mí",
   paragraphs: [
     "Soy un Desarrollador Full-Stack con experiencia práctica construyendo sistemas de producción para los sectores energético, de salud y agroindustrial en México.",
-    "Trabajo con Java & Spring Boot en el backend — diseñando APIs REST seguras, autenticación JWT sin estado y control de acceso basado en roles. En el frontend, uso React y Next.js para construir interfaces rápidas, limpias y centradas en el usuario.",
-    "También soy co-fundador de NGC Software Solutions, donde diseñamos y construimos software personalizado para empresas que necesitan soluciones reales — no herramientas genéricas.",
+    "Trabajo con Java & Spring Boot en el backend, diseñando APIs REST seguras, autenticación JWT sin estado y control de acceso basado en roles. En el frontend, uso React y Next.js para construir interfaces rápidas, limpias y centradas en el usuario.",
+    "También soy co-fundador de NGC Software Solutions, donde diseñamos y construimos software personalizado para empresas que necesitan soluciones reales, no herramientas genéricas.",
   ],
   stats: [
-    { value: "11+", label: "Sistemas en producción" },
+    { value: "14+", label: "Sistemas en producción" },
     { value: "3", label: "Industrias" },
     { value: "2+", label: "Años de experiencia" },
     { value: "2", label: "Empresas" },
@@ -29,12 +29,12 @@ export const aboutContent = {
   title: "About me",
   paragraphs: [
     "I'm a Full-Stack Developer with hands-on experience building production systems for the energy, healthcare, and agroindustrial sectors in Mexico.",
-    "I work with Java & Spring Boot on the backend — designing secure REST APIs, stateless JWT authentication, and role-based access control. On the frontend, I use React and Next.js to build interfaces that are fast, clean, and user-focused.",
-    "I'm also co-founder of NGC Software Solutions, where we design and build custom software for businesses that need real solutions — not generic tools.",
+    "I work with Java & Spring Boot on the backend, designing secure REST APIs, stateless JWT authentication, and role-based access control. On the frontend, I use React and Next.js to build interfaces that are fast, clean, and user-focused.",
+    "I'm also co-founder of NGC Software Solutions, where we design and build custom software for businesses that need real solutions, not generic tools.",
   ],
   stats: [
     {
-      value: "11+",
+      value: "14+",
       label: "Production systems",
     },
     {
